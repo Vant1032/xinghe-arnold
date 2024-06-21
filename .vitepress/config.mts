@@ -28,7 +28,7 @@ export default defineConfig({
       }
     },
     outline: {
-      level: "deep",
+      level: [1, 6],
     },
     lastUpdated: {
       text: 'Updated at',
