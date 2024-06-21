@@ -21,18 +21,29 @@ export default defineConfig({
     hostname: env('', '', 'https://vant1032.github.io/xinghe-arnold/'),
   },
   themeConfig: {
+    search: {
+      provider: 'local',
+      options: {
+        detailedView: true,
+      }
+    },
+    outline: {
+      level: "deep",
+    },
+    lastUpdated: {
+      text: 'Updated at',
+    },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: '首页', link: '/' },
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: '博文',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: '如何使用ffmpeg转换图片格式', link: '/2023/如何使用ffmpeg转换图片格式' },
+          { text: 'Bat语法快速入门', link: '/2020/Bat语法快速入门' },
         ]
       }
     ],
