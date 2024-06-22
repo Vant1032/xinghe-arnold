@@ -2,6 +2,13 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
+#head:
+#- - meta
+#- name: description
+#  content: hello
+
+
+
 hero:
   name: "星河arnold的博客"
   text: ""

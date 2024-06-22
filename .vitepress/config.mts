@@ -18,8 +18,22 @@ export default defineConfig({
   description: "星河arnold的博客，个人网站，",
   base: env('/',  '/','/xinghe-arnold/'),
   sitemap: {
-    hostname: env('', '', 'https://vant1032.github.io/xinghe-arnold/'),
+    hostname: env('', 'https://xinghe-arnold.pages.dev/', 'https://vant1032.github.io/xinghe-arnold/'),
   },
+  head: [
+    [
+      'script',
+      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-6NG5XLJBJW' }
+    ],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6NG5XLJBJW');`
+    ]
+  ],
   themeConfig: {
     search: {
       provider: 'local',
