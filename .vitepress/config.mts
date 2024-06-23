@@ -58,6 +58,8 @@ export default defineConfig({
         items: [
           { text: '如何使用ffmpeg转换图片格式', link: '/2023/如何使用ffmpeg转换图片格式' },
           { text: 'Bat语法快速入门', link: '/2020/Bat语法快速入门' },
+          { text: '国内云服务购买汇总', link: '/2024/国内云服务购买汇总' },
+          { text: '海外云服务购买汇总', link: '/2024/海外云服务购买汇总' },
         ]
       }
     ],
