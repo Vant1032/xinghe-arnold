@@ -19,6 +19,12 @@ export default defineConfig({
   base: env('/',  '/','/xinghe-arnold/'),
   sitemap: {
     hostname: env('', 'https://xinghe-arnold.pages.dev/', 'https://vant1032.github.io/xinghe-arnold/'),
+    transformItems: (items) => {
+      for (const item of items) {
+        item.url = item.url.replace('.html', '')
+      }
+      return items
+    }
   },
   head: [
     [

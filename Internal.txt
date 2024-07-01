@@ -1,0 +1,1 @@
+每次新增博文就要在 .vitepress/config.mts 里新增一条链接
