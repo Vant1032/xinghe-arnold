@@ -17,10 +17,12 @@ export default defineConfig({
   titleTemplate: "星河arnold的博客",
   description: "星河arnold的博客，个人网站，",
   base: env('/',  '/','/xinghe-arnold/'),
+  cleanUrls: true,
   sitemap: {
     hostname: env('', 'https://xinghe-arnold.pages.dev/', 'https://vant1032.github.io/xinghe-arnold/'),
     transformItems: (items) => {
       for (const item of items) {
+        // 后缀有.html页面时，google索引时会报错redirect error，curl -vvvv查看会发现308跳转并且没有内容，所以出错
         item.url = item.url.replace('.html', '')
       }
       return items
@@ -38,7 +40,13 @@ export default defineConfig({
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-6NG5XLJBJW');`
-    ]
+    ],
+      [
+          'meta',
+          {
+            name: 'baidu-site-verification', content: 'codeva-o8J8yXZO2f'
+          }
+      ]
   ],
   themeConfig: {
     search: {
